@@ -4,16 +4,11 @@ const express = require("express"),
   app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
-const session = require("express-session");
-const morgan = require("morgan");
-const flash = require("connect-flash");
 const path = require("path");
 const cors = require("cors");
-const fs = require("fs");
 
 //custom objects
-let port = process.env.PORT || 8000;
+let port = 8000;
 
 let AuthSys = require("./AuthSys");
 let config = require("./Config/database");

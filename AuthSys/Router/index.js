@@ -30,6 +30,11 @@ router.post(
   upload.single("profilePhoto"),
   userController.uploadProfilePhoto
 );
+router.get(
+  "/authenticate/getMyInfo",
+  Auth.isAuthenticated(),
+  userController.getMyInfo
+);
 
 module.exports = {
   router: router

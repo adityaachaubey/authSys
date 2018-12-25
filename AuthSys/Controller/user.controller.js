@@ -100,4 +100,29 @@ exports.uploadProfilePhoto = function(req, res) {
   );
 };
 
+exports.getMyInfo = function(req,res){
+User.findOne(
+    { _id: req.user._id },
+    (err, doc) => {
+      if (err) {
+        res.json({
+          err: err
+        });
+      }
+      res.json({
+        data: doc,
+        message: "Your Info is here"
+      });
+    }
+  );
+};
+
+exports.logout = function(req,res){
+res.json({
+token : "Destroyed",
+message : "Use this token now"
+});
+
+};
+
 
