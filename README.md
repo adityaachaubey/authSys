@@ -1,2 +1,2 @@
 # authSys
-jwt authentication system
+node server.js or npm start
